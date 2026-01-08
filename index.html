@@ -30,6 +30,13 @@
         @keyframes blinker {
             50% { opacity: 0; }
         }
+        .blinkgreen {
+            animation: blinker 0.5s linear infinite;
+            color: green;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
         audio {
             margin-top: 30px;
             filter: invert(100%); /* Deixa o player com visual mais 'dark' */
@@ -59,7 +66,7 @@
         </audio>
 
         <p><br>> Aguardando reinicialização manual...</p>
-        <p>> <span class="blink">FALHA CRÍTICA</span></p>
+        <p>> <span class="blinkgreen">_</span></p>
 
         <div class="hidden-debug-data">
             <p>*** DEBUG MODE ATIVADO ***</p>
