@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNEN - EMERGENCY GATEWAY [OFFLINE]</title>
+    <style>
+        /* Estilo Retro Terminal */
+        body {
+            background-color: #000000; /* Fundo preto */
+            color: #33ff00; /* Texto verde fósforo */
+            font-family: 'Courier New', Courier, monospace; /* Fonte de máquina */
+            padding: 40px;
+        }
+        .terminal-box {
+            border: 2px solid #33ff00;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        .blink {
+            animation: blinker 1s linear infinite;
+            color: red;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+        audio {
+            margin-top: 30px;
+            filter: invert(100%); /* Deixa o player com visual mais 'dark' */
+            outline: none;
+        }
+        
+        /* O SEGREDO: Esta classe esconde o elemento da visão normal */
+        .hidden-debug-data {
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="terminal-box">
+        <h1>> SISTEMA CENTRAL: <span class="blink">FALHA CRÍTICA</span></h1>
+        <p>--------------------------------------------------</p>
+        <p>> ERRO 503: GATEWAY DE SERVIÇO INDISPONÍVEL.</p>
+        <p>> A conexão com a Intranet foi cortada fisicamente.</p>
+        <p>> O servidor entrou em modo de transmissão de emergência (LOOP).</p>
+        <p>--------------------------------------------------</p>
+        <p>> REPRODUZINDO ÚLTIMO SINAL DE RÁDIO CAPTADO (FREQUÊNCIA CURTA):</p>
+
+        <audio controls loop>
+            <source src="broadcast_signal.wav" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+
+        <p><br>> Aguardando reinicialização manual...</p>
+        <p>> _</p>
+
+        <div class="hidden-debug-data">
+            <p>*** DEBUG MODE ATIVADO ***</p>
+            <p>Arquivo de despejo de memória encontrado no cache.</p>
+            <a href="RELATORIO_D3_REF_X99.pdf" download style="color: red;">
+                [DOWNLOAD: DUMP_RELATORIO_ERRO.dat]
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
